@@ -37,6 +37,8 @@ check_packages() {
     fi
 }
 
+export DEBIAN_FRONTEND=noninteractive
+
 check_packages curl
 
 file="tailwindcss-linux-x64"
