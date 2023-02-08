@@ -1,0 +1,10 @@
+{
+    "tailwindcss-standalone-cli": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "tailwindcss-standalone-cli": {
+                "version": "latest"
+            }
+        }
+    }
+}

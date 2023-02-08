@@ -1,0 +1,19 @@
+{
+    "name": "TailwindCSS Standalone CLI",
+    "id": "tailwindcss-standalone-cli",
+    "version": "0.1.1",
+    "description": "Standalone CLI: Use Tailwind CSS without Node.js",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "Select or enter a TailwindCSS Standalone CLI version to install"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
