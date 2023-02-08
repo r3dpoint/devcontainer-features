@@ -1,13 +1,15 @@
 {
     "name": "TailwindCSS Standalone CLI",
     "id": "tailwindcss-standalone-cli",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Standalone CLI: Use Tailwind CSS without Node.js",
     "options": {
         "version": {
             "type": "string",
             "proposals": [
-                "latest"
+                "latest",
+                "v3.2.6",
+                "v3.2.5"
             ],
             "default": "latest",
             "description": "Select or enter a TailwindCSS Standalone CLI version to install"

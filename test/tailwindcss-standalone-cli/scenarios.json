@@ -1,0 +1,10 @@
+{
+    "install_tailwind_standalone_cli_from_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "tailwindcss-standalone-cli": {
+                "version": "v3.2.5"
+            }
+        }
+    }
+}

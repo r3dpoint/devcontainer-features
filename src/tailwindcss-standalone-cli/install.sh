@@ -16,10 +16,6 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 version=${VERSION:-"latest"}
-if [ "${version}" != "latest" ]; then
-    echo "(!) Version $version unsupported"
-    exit 1
-fi
 
 kernel="$(uname)"
 if [ "${kernel}" != "Linux" ]; then
@@ -42,7 +38,15 @@ else
     exit 1
 fi
 
-curl -sLO "https://github.com/tailwindlabs/tailwindcss/releases/${version}/download/${file}"
+# GitHub doesn't download latest version from the same URL syntax
+if [ "${version}" == "latest" ]; then
+    url="https://github.com/tailwindlabs/tailwindcss/releases/latest/download/${file}"
+else
+    url="https://github.com/tailwindlabs/tailwindcss/releases/download/${version}/${file}"
+fi
+echo "url=${url}"
+
+curl -sLO "${url}"
 chmod +x "${file}"
 mv "${file}" "/usr/local/bin/tailwindcss"
 
