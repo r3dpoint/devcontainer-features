@@ -33,8 +33,7 @@ if [ "${architecture}" != "x86_64" ]; then
     exit 1
 fi
 
-apt_get_update()
-{
+apt_get_update() {
     echo "Running apt-get update..."
     apt-get update -y
 }
