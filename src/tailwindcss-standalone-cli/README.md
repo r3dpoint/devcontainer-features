@@ -7,7 +7,7 @@ Standalone CLI: Use Tailwind CSS without Node.js
 
 ```json
 "features": {
-    "ghcr.io/r3dpoint/devcontainer-features/tailwindcss-standalone-cli:0": {}
+    "ghcr.io/r3dpoint/devcontainer-features/tailwindcss-standalone-cli:1": {}
 }
 ```
 
@@ -18,6 +18,9 @@ Standalone CLI: Use Tailwind CSS without Node.js
 | version | Select or enter a TailwindCSS Standalone CLI version to install | string | latest |
 
 # Notes
+
+Official TailwindCSS Standalone CLI Docs: <https://tailwindcss.com/blog/standalone-cli>
+
 
 ---
 
