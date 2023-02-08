@@ -28,8 +28,15 @@ if [ "${architecture}" != "x86_64" ]; then
     exit 1
 fi
 
+apt_get_update()
+{
+    echo "Running apt-get update..."
+    apt-get update -y
+}
+
 # Checks if packages are installed and installs them if not
 check_packages() {
+    apt_get_update
     apt-get -y install --no-install-recommends "$@"
 }
 
