@@ -8,6 +8,8 @@
 # - https://github.com/devcontainers/features/blob/main/src/ruby/install.sh
 # - https://github.com/devcontainers/features/blob/main/src/aws-cli/install.sh
 
+set -e
+
 version=${VERSION:-"latest"}
 if [ "${version}" != "latest" ]; then
     echo "(!) Version $version unsupported"
@@ -42,8 +44,8 @@ export DEBIAN_FRONTEND=noninteractive
 check_packages curl
 
 file="tailwindcss-linux-x64"
-curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/${version}/download/${file}
-chmod +x ${file}
-mv ${file} /usr/local/bin/tailwindcss
+curl -sLO "https://github.com/tailwindlabs/tailwindcss/releases/${version}/download/${file}"
+chmod +x "${file}"
+mv "${file}" "/usr/local/bin/tailwindcss"
 
 echo "Done!"
